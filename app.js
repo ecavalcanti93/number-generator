@@ -3,6 +3,16 @@ function sortear() {
     let numMinimo = parseInt(document.getElementById("de").value);
     let numMaximo = parseInt(document.getElementById("ate").value);
 
+    if (numMinimo >= numMaximo) {
+        alert("The 'From number' field must be less than the 'To number' field. Please check!")
+        return;
+    }
+
+    if (quantidade > (numMaximo - numMinimo + 1)) {
+        alert("The 'Quantity of number' field must be less than or equal to the number range. Please check!")
+        return;
+    }
+
     let sorteados = [];
     let numero;
     
